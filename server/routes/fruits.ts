@@ -1,7 +1,6 @@
 import express from 'express'
 import { Fruit, FruitSnakeCase } from '../../models/fruit.ts'
 import { JwtRequest } from '../auth0.ts'
-import checkJwt from '../auth0.ts'
 
 import {
   getFruits,
@@ -26,7 +25,7 @@ router.get('/', (req, res) => {
 
 // TODO: use checkJwt as middleware
 // POST /api/v1/fruits
-router.post('/', checkJwt, (req: JwtRequest, res) => {
+router.post('/', (req: JwtRequest, res) => {
   const { fruit } = req.body
   const auth0Id = req.auth?.sub
 
@@ -52,7 +51,7 @@ router.post('/', checkJwt, (req: JwtRequest, res) => {
 
 // TODO: use checkJwt as middleware
 // PUT /api/v1/fruits
-router.put('/', checkJwt, (req: JwtRequest, res) => {
+router.put('/', (req: JwtRequest, res) => {
   const { fruit } = req.body
   const auth0Id = req.auth?.sub
   const fruitToUpdate = {
@@ -85,7 +84,7 @@ router.put('/', checkJwt, (req: JwtRequest, res) => {
 
 // TODO: use checkJwt as middleware
 // DELETE /api/v1/fruits
-router.delete('/:id', checkJwt, (req: JwtRequest, res) => {
+router.delete('/:id', (req: JwtRequest, res) => {
   const id = Number(req.params.id)
   const auth0Id = req.auth?.sub
 
