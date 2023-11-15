@@ -13,11 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
      * TODO: replace the empty strings below with your own domain, clientId, and audience
      */
     <Auth0Provider
-      domain=""
-      clientId=""
+      domain='pohutukawa-23-daph.au.auth0.com'
+      clientId='zI9iLUJ8zCFroGbNaqeNpUYLyeGryM8R'
       authorizationParams={{
         redirect_uri: window.location.origin,
-        audience: '',
+        audience: 'https://fruits/api',
       }}
     >
       <Router>
