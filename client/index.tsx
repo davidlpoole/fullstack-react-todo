@@ -5,17 +5,15 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import App from './components/App.tsx'
 
 document.addEventListener('DOMContentLoaded', () => {
+  console.log()
+
   createRoot(document.getElementById('app') as HTMLElement).render(
-    /**
-     * Auth0Provider is a component that has a hook that provides
-     * all authentication operations
-     */
     <Auth0Provider
-      domain="davidlpoole.au.auth0.com"
-      clientId="EQqnf7la5j8xPSP0v7oIrwd0QXbLcWVX"
+      domain={import.meta.env.VITE_AUTH0_DOMAIN}
+      clientId={import.meta.env.VITE_AUTH0_CLIENTID}
       authorizationParams={{
         redirect_uri: window.location.origin,
-        audience: 'https://fruits/api',
+        audience: import.meta.env.VITE_AUTH0_AUDIENCE,
       }}
     >
       <Router>
