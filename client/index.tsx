@@ -9,15 +9,13 @@ document.addEventListener('DOMContentLoaded', () => {
     /**
      * Auth0Provider is a component that has a hook that provides
      * all authentication operations
-     *
-     * TODO: replace the empty strings below with your own domain, clientId, and audience
      */
     <Auth0Provider
-      domain=""
-      clientId=""
+      domain="davidlpoole.au.auth0.com"
+      clientId="EQqnf7la5j8xPSP0v7oIrwd0QXbLcWVX"
       authorizationParams={{
         redirect_uri: window.location.origin,
-        audience: '',
+        audience: 'https://fruits/api',
       }}
     >
       <Router>
