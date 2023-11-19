@@ -14,6 +14,7 @@ function Nav() {
     console.log('sign in')
     loginWithRedirect()
   }
+  console.log(user)
 
   return (
     <>
