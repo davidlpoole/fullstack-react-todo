@@ -1,0 +1,13 @@
+GET http://localhost:3000/api/v1/fruits 
+
+###
+POST http://localhost:3000/api/v1/fruits
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InU4Q0pVYW1HazFJdENuX1hlVTE0dSJ9.eyJpc3MiOiJodHRwczovL2RhdmlkbHBvb2xlLmF1LmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NTVhNzkyYmFlZmZjZjM4MDVkZjQyNzMiLCJhdWQiOlsiaHR0cHM6Ly9mcnVpdHMvYXBpIiwiaHR0cHM6Ly9kYXZpZGxwb29sZS5hdS5hdXRoMC5jb20vdXNlcmluZm8iXSwiaWF0IjoxNzAwNDMxMDA2LCJleHAiOjE3MDA1MTc0MDYsImF6cCI6IkVRcW5mN2xhNWo4eFBTUDB2N29JcndkMFFYYkxjV1ZYIiwic2NvcGUiOiJvcGVuaWQgcHJvZmlsZSBlbWFpbCJ9.Yu2Mq7LRVM2vsUAE8nKoZhn_OaSeegqqSHtjwjOtNQokXjF0LDA1kv-pDqeKxCp4zDJ5pG-nMuFbPYx83rkLD3nkEsv-TqLUsRqQDCnMKTpBMZeexzaE8ETr5s-46_5pjFkswM2GEydjgZS_deq72MD14Kl7bl8uC8f-0zJ725HOGmXdRihzIiEmfINjx5LKgJgX4VJWTGVxESrgdHe-il1-xxDi3oOga__oye0dEgBQonTvB0gWrFupSwzit92LtGtdOtf7kUzySOBsY1XiIArCeid0OPfoGiWKQEVYxrUBfWfVN8DObth24_zBs83f8Wh_Sg9NgvS0EVdusBQUKw
+
+{
+  "fruit": {
+    "name": "dasdasd",
+    "average_grams_each": 100
+  }
+}

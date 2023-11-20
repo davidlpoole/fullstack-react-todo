@@ -10,13 +10,16 @@ export function getFruits(): Promise<Fruit[]> {
     .catch(logError)
 }
 
-export function addFruit(fruit: NewFruit, token: string): Promise<Fruit[]> {
-  return request
+export async function addFruit(
+  fruit: NewFruit,
+  token: string
+): Promise<Fruit[]> {
+  const result = await request
     .post(`${rootUrl}/fruits`)
     .set('Authorization', `Bearer ${token}`)
     .send({ fruit })
-    .then((res) => res.body.fruits)
-    .catch(logError)
+
+  return result.body.fruits
 }
 
 export function updateFruit(fruit: Fruit, token: string): Promise<Fruit[]> {
